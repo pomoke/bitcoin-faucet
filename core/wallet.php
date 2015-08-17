@@ -16,9 +16,12 @@ $privatekey = "6LfYSssSAAAAAPntQz9H0twbsdyk8kQHO_F4mupD";
 
 // init
 
-$btclient = new bitcoinClient("http",$btclogin["username"],$btclogin["password"],$btclogin["host"],$btclogin["port"]);
-$addr = new Address($btclient,$sqlogin);
-$derp = $btclient->getinfo();
+#$btclient = new bitcoinClient("http",$btclogin["username"],$btclogin["password"],$btclogin["host"],$btclogin["port"]);
+#$addr = new Address($btclient,$sqlogin);
+#$derp = $btclient->getinfo();
+//Wallet by microwallet
+$microwallet = new Microwallet('YOUR_API_KEY_HERE');
+
 
 //$this->PDO_Conn = new PDO("mysql:host={$sqllogin['host']};dbname={$sqllogin['dbname']}", $sqllogin['username'], $sqllogin['password']);
 $dbconn = mysql_connect($sqlogin['host'],$sqlogin['username'],$sqlogin['password']);
